@@ -13,7 +13,7 @@
                 if (numToIndex.ContainsKey(target - num))
                     return [i, numToIndex[target - num]];
 
-                if (numToIndex.ContainsKey(num))
+                if (!numToIndex.ContainsKey(num))
                     numToIndex.Add(num, i);
             }
 
