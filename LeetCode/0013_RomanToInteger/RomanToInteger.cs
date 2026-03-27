@@ -15,24 +15,17 @@
                 { 'M', 1000 }
             };
 
-            int sum = 0;
-
-            int previous = charToValue[s[0]];
+            int sum = charToValue[s[0]];
 
             for (int i = 1; i < s.Length; i++)
             {
                 int current = charToValue[s[i]];
+                int previous = charToValue[s[i - 1]];
 
                 if (previous < current)
-                {
-                    sum -= current;
-                }
+                    sum += current - 2 * previous;
                 else
-                {
                     sum += current;
-                }
-
-                previous = current;
             }
 
             return sum;
