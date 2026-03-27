@@ -2,7 +2,7 @@
 {
     public class RomanToInteger
     {
-        public static int RomanToInt(string s)
+        public static int Solve(string s)
         {
             Dictionary<char, int> charToValue = new Dictionary<char, int>
             {
